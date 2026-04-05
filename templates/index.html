@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale-1.0">
+        <title>Money Amount Detector</title>
+        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@400;700&family=Anton&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="../static/main.css">
+        <script src="../static/main.js" defer></script>
+    </head>
+    <body>
+        <h1>Money Amount Detector</h1>
+        <form onsubmit="detect(event)">
+            <textarea id="input" placeholder="Enter prompt here..."></textarea>
+            <br>
+            <button type="submit">CHECK</button>
+        </form>
+        <div class="container">
+            <br>
+            <span class="bruh">Number of matches: <span class="bruh" id="num">0</span></span>
+            <div id="output"></div>
+        </div>
+    </body>
+</html>

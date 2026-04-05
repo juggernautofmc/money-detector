@@ -1,0 +1,88 @@
+* {
+    font-family: 'Inter';
+    text-align: center;
+}
+
+h1 {
+    font-family: 'Bebas Neue';
+    margin: 0;
+    font-size: 50px;
+}
+
+
+.bruh {
+    margin: 10px;
+    font-size: 20px;
+}
+
+span #num {
+    color: rgb(145, 193, 72);
+    font-weight: bolder;
+}
+
+.highlight {
+    background-color: #adff2f;
+    padding: 4px;
+    border-radius: 7px;
+}
+
+form {
+    padding: 10px;
+}
+
+#input {
+    width: 500px;
+    height: 300px;
+    text-align: left;
+    padding: 15px;
+    border-radius: 20px;
+    resize: none;
+    margin: 10px;
+    transition: 0.2s ease-in-out;
+}
+
+#input:focus {
+    border-width: 3px;
+    outline: none;
+}
+
+body {
+    background-color: #ebffe9;
+    margin: 25px;
+}
+
+button {
+    width: 150px;
+    height: 50px;
+    border-radius: 40px;
+    font-size: 20px;
+    font-weight: bolder;
+    margin: 10px;
+    transition: 0.1s ease-in-out;
+    border-color: black;
+}
+
+button:hover {
+    background-color: rgb(207, 207, 207);
+}
+
+button:active {
+    border-width: 4px;
+}
+
+#output {
+    display: block;
+    width: 80%;
+    min-height: 200px;
+    border: 1px solid black;
+    border-radius: 20px;
+    padding: 15px;
+    background-color: white;
+    overflow-wrap: break-word;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
