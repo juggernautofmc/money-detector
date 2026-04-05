@@ -115,11 +115,19 @@ I also had about 500 dollars left.
 
 ### Runtime Analysis
 
-The system operates in **linear time O(n)** with respect to input length.
+The system operates efficiently with respect to input size, but includes additional overhead during post-processing.
 
-- Each regex pattern performs a full scan over the input string
-- Two patterns are used → total complexity remains O(n)
-- Post-processing (sorting + overlap resolution) is also O(n log n) in the worst case due to sorting, but the number of matches is typically small relative to input size
+- Each regex pattern performs a scan over the input string → approximately **O(n)** per pattern  
+- Two patterns are used → total regex matching remains **O(n)** in practice  
+- Candidate matches are then filtered for overlap:
+  - Each new match from the second pattern is compared against existing matches  
+  - This results in a worst-case **O(m²)** complexity, where *m* is the number of detected candidates  
+- Final sorting of matches is **O(m log m)**  
+
+Overall runtime:
+
+- **O(n + m²)** in the worst case  
+- **O(n)** in typical scenarios, since the number of matches (*m*) is usually small relative to input length  
 
 In practice, the system performs efficiently even on long inputs, as demonstrated by stress testing with large multi-paragraph text.
 
