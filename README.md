@@ -96,8 +96,7 @@ This allows the user to see both the original input and the exact locations wher
  
 This project is deployed on Vercel via GitHub
  
-- Live Demo: [Paste your Vercel link here]
-- GitHub Repo: [Link here]
+ [Live Demo](https://money-detector-dusky.vercel.app)
  
 ## Example Input
  
