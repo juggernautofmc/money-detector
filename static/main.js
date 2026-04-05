@@ -1,4 +1,8 @@
-function highlightText(text, matches) {
+function sleep() {
+    return new Promise(resolve => setTimeout(resolve, 20));
+}
+
+async function highlightText(text, matches) {
     let result = "";
     let idx = 0;
     let numFound = 0;
@@ -14,7 +18,11 @@ function highlightText(text, matches) {
     result += text.slice(idx);
 
     document.getElementById("output").innerHTML = result;
-    document.getElementById("num").innerHTML = numFound;
+
+    for (let i = 0; i <= numFound; i++) {
+        document.getElementById("num").innerHTML = i;
+        await sleep();
+    }
 }
 
 async function detect(e) {
@@ -32,7 +40,7 @@ async function detect(e) {
 
         const data = await response.json();
 
-        highlightText(data.text, data.matches);
+        await highlightText(data.text, data.matches);
 
     }
     catch (error) {
