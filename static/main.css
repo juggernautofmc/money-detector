@@ -60,6 +60,8 @@ button {
     margin: 10px;
     transition: 0.1s ease-in-out;
     border-color: black;
+    border-style: solid;
+    background-color: rgb(240, 240, 240);
 }
 
 button:hover {
