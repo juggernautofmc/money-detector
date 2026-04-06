@@ -41,6 +41,12 @@ form {
     transition: 0.2s ease-in-out;
 }
 
+@media (max-width: 635px) {
+    #input {
+        width: 90%;
+    }
+}
+
 #input:focus {
     border-width: 3px;
     outline: none;
@@ -59,6 +65,7 @@ button {
     font-weight: bolder;
     margin: 10px;
     transition: 0.1s ease-in-out;
+    color: black;
     border-color: black;
     border-style: solid;
     background-color: rgb(240, 240, 240);
