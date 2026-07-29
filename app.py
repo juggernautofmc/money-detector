@@ -52,9 +52,11 @@ def detect_money_amount(pmpt):
         |                          # OR
         dollar(s)?|euro(s)?|yen|pound(s)?|franc(s)?|yuan|peso(s)?|rupee(s)?|ruble(s)?|bitcoin(s)?
                                    # word currency
+        |                          # OR
+        [\$€£¥₹₽₿]  
     )
 
-    \b                              # word boundary
+    (?=\W|$)                              # word boundary
 """, re.IGNORECASE | re.VERBOSE)
     match1 = re.finditer(ptn1, pmpt)
     match2 = re.finditer(ptn2, pmpt)
